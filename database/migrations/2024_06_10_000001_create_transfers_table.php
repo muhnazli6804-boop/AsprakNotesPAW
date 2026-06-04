@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('transfers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // asprak
+            $table->foreignId('user_id')->constrained()->onDelete('no action'); // asprak
             $table->decimal('nominal', 12, 2);
             $table->string('keterangan')->nullable();
             $table->date('tanggal');
